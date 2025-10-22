@@ -1,0 +1,18 @@
+[
+    {
+        "nome": "Maria Silva",
+        "usuario": "maria.silva",
+        "foto": "uploads\/foto_68f9231f027ba.png",
+        "mensagem": "Boa tarde",
+        "data": "22\/10\/2025 18:32",
+        "likes": 1
+    },
+    {
+        "nome": "Anthony SB",
+        "usuario": "anthonysb",
+        "foto": "img\/avatar-padrao.png",
+        "mensagem": "Ola",
+        "data": "22\/10\/2025 16:35",
+        "likes": 1
+    }
+]

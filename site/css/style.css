@@ -1,0 +1,414 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #4b2c82, #352b78, #2596be, #2e8b57);
+    background-size: 400% 400%;
+    animation: gradientShift 12s ease infinite;
+}
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+.centralizador {
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container-login,
+.container-cadastro {
+    background: rgba(25, 25, 55, 0.95);
+    backdrop-filter: blur(7px);
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    width: 380px;
+    max-width: 95vw;
+    padding: 38px 32px 30px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+    color: #eaf1ff;
+}
+h1 {
+    color: #74d69d;
+    font-size: 2rem;
+    margin-bottom: 28px;
+    text-shadow: 0 0 8px #5180763b;
+}
+.form-group {
+    text-align: left;
+    margin-bottom: 18px;
+}
+label {
+    font-size: 15px;
+    font-weight: 500;
+    color: #c5c8ff;
+    display: block;
+    margin-bottom: 7px;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="file"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.09);
+    color: #e7eafb;
+    font-size: 15px;
+    transition: background 0.2s;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    background: rgba(255,255,255,0.14);
+    box-shadow: 0 0 8px #74d69d99;
+}
+input[type="file"] {
+    background: transparent;
+    padding: 0;
+}
+.botao-cadastro,
+.botao-login {
+    width: 100%;
+    padding: 12px 0;
+    margin-top: 12px;
+    background: linear-gradient(90deg, #74d69d, #0b749e 60%);
+    color: #f5fff8;
+    font-size: 17px;
+    font-weight: 700;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 12px #2623413d;
+    margin-bottom: 8px;
+}
+.botao-cadastro:hover,
+.botao-login:hover {
+    background: linear-gradient(90deg, #2e8b57, #1a6b85);
+    color: #fff;
+}
+.erro {
+    background: rgba(255,85,85,0.12);
+    border: 1px solid #ff5555;
+    color: #ffd9d9;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 18px;
+    font-weight: bold;
+    box-shadow: 0 0 10px #ff555522;
+}
+.link-login,
+.link-cadastro {
+    text-align: center;
+    margin-top: 12px;
+    color: #d2e6ff;
+    font-size: 15px;
+}
+.link-login a,
+.link-cadastro a {
+    color: #74d69d;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+.link-login a:hover,
+.link-cadastro a:hover {
+    color: #2e8b57;
+    text-shadow: 0 0 8px #2e8b579f;
+}
+
+/* ================== Feed =============== */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background: linear-gradient(135deg, #3a076d 0%, #4b2c82 50%, #0b749e 75%, #2e8b57 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: #e2efff;
+}
+
+.barra-navegacao {
+    background: linear-gradient(90deg, #483d8b 60%, #74d69d 100%);
+    padding: 15px 20px;
+    border-bottom: 2px solid #2e8b57;
+    box-shadow: 0 4px 14px rgba(116,214,157, 0.1);
+}
+
+.barra-navegacao ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.barra-navegacao ul li a {
+    display: block;
+    padding: 15px 30px;
+    text-decoration: none;
+    color: #e0e6ff;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    transition: background 0.3s, color 0.2s;
+}
+
+.barra-navegacao ul li a:hover {
+    background: #74d69d;
+    color: #24174b;
+}
+
+.conteudo-principal {
+    flex-grow: 1;
+    padding: 30px;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.cabecalho-pagina {
+    background: #232353;
+    padding: 24px;
+    border: 2px solid #74d69d;
+    border-radius: 16px;
+    margin-bottom: 32px;
+    box-shadow: 0 4px 16px rgba(18,52,86,0.08);
+    color: #caf8f6;
+}
+
+.info-perfil {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 22px;
+    border: 3px solid #74d69d;
+    background: linear-gradient(135deg, #74d69d 40%, #4b2c82 100%);
+    object-fit: cover;
+}
+
+.info-texto-perfil {
+    display: flex;
+    flex-direction: column;
+}
+
+.nome-usuario {
+    font-size: 25px;
+    font-weight: bold;
+    color: #59a87d;
+    letter-spacing: 1px;
+}
+
+.nickname-usuario {
+    color: #abb2f9;
+    font-size: 17px;
+    margin-top: 2px;
+}
+
+.btn {
+    border: none;
+    padding: 11px 22px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    background: linear-gradient(90deg, #74d69d, #0b749e);
+    color: #1a1a2e;
+    transition: background 0.3s;
+}
+
+.btn-editar-perfil {
+    margin-left: auto;
+}
+
+.btn:hover {
+    background: #2e8b57;
+    color: #fff;
+}
+
+.form-nova-postagem textarea {
+    width: 100%;
+    height: 80px;
+    border: 2px solid #483d8b;
+    border-radius: 11px;
+    padding: 12px;
+    font-size: 16px;
+    resize: vertical;
+    background: #30357d;
+    color: #e0e6ff;
+}
+
+.form-actions {
+    text-align: right;
+    margin-top: 12px;
+}
+
+.post {
+    background: #2d2f54;
+    border: 2px solid #4b2c82;
+    border-radius: 15px;
+    padding: 22px;
+    margin-bottom: 22px;
+    box-shadow: 0 2px 16px rgba(72,44,130,0.07);
+    color: #dbeaf3;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.avatar-post {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+    border: 2px solid #74d69d;
+    object-fit: cover;
+}
+
+.post-info-autor {
+    display: flex;
+    flex-direction: column;
+}
+
+.nome-autor {
+    font-weight: bold;
+    color: #74d69d;
+}
+
+.nickname-autor {
+    color: #b9c7ff;
+    font-size: 16px;
+}
+
+.post-content p {
+    font-size: 17px;
+    line-height: 1.5;
+    color: #e6edff;
+}
+
+.post-footer {
+    display: flex;
+    gap: 22px;
+    margin-top: 18px;
+    color: #abb2f9;
+}
+
+.post-actions {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.post-actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 22px;
+    color: #74d69d;
+    transition: color 0.3s;
+}
+
+.post-actions button:hover {
+    color: #2e8b57;
+}
+
+.post-actions label {
+    font-size: 15px;
+    color: #abb2f9;
+}
+
+/* Comentários */
+.comment-list {
+    max-height: 140px;
+    overflow-y: auto;
+    padding-left: 20px;
+    border-left: 2px solid #74d69d;
+    margin: 18px 0 16px 0;
+}
+
+.comment-item {
+    padding: 7px 0;
+    color: #a8b1e2;
+}
+
+.comment-user {
+    font-weight: 700;
+    margin-right: 6px;
+}
+
+.comment-date {
+    font-size: 11px;
+    color: #8892bf;
+    margin-left: 8px;
+}
+
+.comment-form textarea {
+    width: 100%;
+    min-height: 68px;
+    padding: 10px 14px;
+    font-size: 14px;
+    border-radius: 14px;
+    border: 2px solid #483d8b;
+    background: #2d2f54;
+    color: #dde1ff;
+    resize: none;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.comment-form textarea:focus {
+    border-color: #74d69d;
+}
+
+.comment-form button {
+    padding: 12px 18px;
+    margin-top: 10px;
+    background: #74d69d;
+    color: #1a1a2e;
+    font-weight: 700;
+    font-size: 14px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.comment-form button:hover {
+    background: #2e8b57;
+    color: white;
+}
+
+/* Responsividade */
+@media (max-width: 720px) {
+    .conteudo-principal {
+        width: 95vw;
+        padding: 20px;
+    }
+    .container-login,
+    .container-cadastro {
+        width: 95vw;
+        padding: 32px 16px;
+    }
+}
