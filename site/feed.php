@@ -16,7 +16,6 @@ if (empty($_SESSION)) {
     $foto = $_SESSION['foto'] ?? 'uploads/avatar-padrao.png';
 }
 
-
 $arquivoPosts = 'posts.json';
 $posts = file_exists($arquivoPosts) ? json_decode(file_get_contents($arquivoPosts), true) : [];
 
@@ -83,7 +82,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['comment']) && isset($
     <li><a href="#">🏠 Início</a></li>
     <li><a href="#">🔍 Pesquisa</a></li>
     <li><a href="#">➕ Nova Postagem</a></li>
-    <li><a href="#">👤 Perfil</a></li>
+    <!-- Link de perfil atualizado -->
+    <li><a href="perfil.php">👤 Perfil</a></li>
     <li><a href="logout.php" style="color:#74d69d;">Sair</a></li>
   </ul>
 </nav>
@@ -95,7 +95,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['comment']) && isset($
         <span class="nome-usuario"><?= htmlspecialchars($nome) ?></span>
         <span class="nickname-usuario">@<?= htmlspecialchars($usuario) ?></span>
       </div>
-      <a href="cadastro.php" class="btn btn-editar-perfil">Editar Perfil</a>
+      <!-- Botão de editar perfil leva para perfil.php -->
+      <a href="perfil.php" class="btn btn-editar-perfil">Editar Perfil</a>
     </div>
     <form class="form-nova-postagem" method="post" action="">
       <textarea name="mensagem" placeholder="No que está pensando?" required></textarea>
